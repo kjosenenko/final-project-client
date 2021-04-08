@@ -9,17 +9,17 @@ import ErrorPage from './components/ErrorPage'
 class  App extends Component {
   render() {
     return (
-      <div className="container">
-        <Router>
-          <Nav />
+      <Router>
+        <Nav />
+        <div className="container">
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/posts" component={Posts}/>
             <Route exact path="/new" component={Form}/>
             <Route component={ErrorPage}/>
           </Switch>
-        </Router>
-      </div>
+        </div>
+      </Router>
     );
   }
   
