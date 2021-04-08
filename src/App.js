@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Form from './components/Form'
 import Posts from './components/Posts'
 import ErrorPage from './components/ErrorPage'
+import Footer from './components/Footer'
 
 class  App extends Component {
   render() {
@@ -21,6 +22,8 @@ class  App extends Component {
             <Route component={ErrorPage}/>
           </Switch>
         </div>
+        <br />
+        <Footer />
       </Router>
     );
   }
