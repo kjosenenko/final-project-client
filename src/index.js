@@ -2,13 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 import {Provider} from 'react-redux'
-import {createStore, applyMiddleware} from 'redux'
+import {createStore, applyMiddleware, combineReducers} from 'redux'
+import thunk from 'redux-thunk'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import postsReducer from './reducers/postsReducer'
+import repliesReducer from './reducers/repliesReducer'
+
+const reducer = combineReducers({
+  posts: postsReducer,
+  replies: repliesReducer
+})
+
+const store = createStore(reducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
