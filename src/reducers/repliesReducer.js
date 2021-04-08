@@ -2,7 +2,7 @@ const initialState = {
     replies: []
 }
 
-const repliesReducer = (state, action) => {
+const repliesReducer = (state=initialState, action) => {
     switch(action.type) {
         default:
             return state
