@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 
 export class Reply extends Component {
     render() {
+        const {author, reply}= this.props
         return (
             <div>
-                Reply
+                <small>{author} says:</small>
+                <p>{reply}</p>
             </div>
+            // <div>Reply</div>
         )
     }
 }

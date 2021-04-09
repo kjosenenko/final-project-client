@@ -6,11 +6,11 @@ import thunk from 'redux-thunk'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import postsReducer from './reducers/postsReducer'
-import repliesReducer from './reducers/repliesReducer'
+import threadReducer from './reducers/threadReducer'
 
 const reducer = combineReducers({
   posts: postsReducer,
-  replies: repliesReducer
+  thread: threadReducer
 })
 
 const store = createStore(reducer, applyMiddleware(thunk))

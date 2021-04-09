@@ -9,6 +9,7 @@ import Form from './components/Form'
 import Posts from './components/Posts'
 import ErrorPage from './components/ErrorPage'
 import Footer from './components/Footer'
+import PostThread from './components/PostThread'
 
 class  App extends Component {
   componentDidMount() {
@@ -25,6 +26,7 @@ class  App extends Component {
             <Route exact path="/" component={Home}/>
             <Route exact path="/posts" component={Posts}/>
             <Route exact path="/posts/new" component={Form}/>
+            <Route exact path="/posts/:id" component={(routerProps) => <PostThread paramsId={parseInt(routerProps.match.params.id)}/>}/>
             <Route component={ErrorPage}/>
           </Switch>
         </div>
@@ -37,3 +39,4 @@ class  App extends Component {
 }
 
 export default connect(null, {getPosts})(App);
+// paramsId={parseInt(routerProps.match.params.id)}
