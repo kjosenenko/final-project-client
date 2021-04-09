@@ -1,5 +1,12 @@
-
 #container-div {
-    background-image: linear-gradient(to bottom right, green, white);
-    border-radius: 15px; 
-  }
+  background-image: linear-gradient(to bottom right, green, white);
+  border-radius: 15px; 
+}
+
+h5 {
+  color:green;
+}
+
+small {
+  color:grey
+}
