@@ -7,7 +7,7 @@ class Home extends Component {
             <div>
                 <h1>Welcome to Greennit</h1>
                 <p>Here you might find some useful information. But since this is the internet you will mostly just find a bunch of opinions noone cares about and plenty of useless information.</p>
-                <Link className="btn btn-success" to="/new">Start Posting!</Link>
+                <Link className="btn btn-success" to="/posts/new">Start Posting!</Link>
                 <br /><br />
                 <Link className="btn btn-success" to="/posts">View Threads</Link>
             </div>

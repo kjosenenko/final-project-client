@@ -4,9 +4,10 @@ import Post from './Post'
 
 class Posts extends Component {
     render() {
-        const posts = this.props.posts.map((post, i) => <Post author={post.author} subject={post.subject} post={post.post} />)
+        const posts = this.props.posts.map((post, i) => <Post author={post.author} subject={post.subject} post={post.post}/>)
         return (
             <div>
+                <h1>Posts</h1>
                 {posts}
             </div>
         )
