@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {getPosts} from './actions/post'
 import Nav from './components/Nav'
 import Home from './components/Home'
 import Form from './components/Form'
@@ -9,6 +11,10 @@ import ErrorPage from './components/ErrorPage'
 import Footer from './components/Footer'
 
 class  App extends Component {
+  componentDidMount() {
+    this.props.getPosts()
+  }
+
   render() {
     return (
       <Router>
@@ -30,4 +36,4 @@ class  App extends Component {
   
 }
 
-export default App;
+export default connect(null, {getPosts})(App);
