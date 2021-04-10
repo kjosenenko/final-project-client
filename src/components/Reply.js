@@ -8,7 +8,6 @@ export class Reply extends Component {
                 <small>{author} says:</small>
                 <p>{reply}</p>
             </div>
-            // <div>Reply</div>
         )
     }
 }
