@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import Reply from './Reply'
+import {getPostThread} from '../actions/postThread'
 
 class PostThread extends Component {
+    componentDidMount() {
+        this.props.getPostThread(this.props.paramsId)
+    }
     render() {
         const post = this.props.post
         let replies = this.props.replies
@@ -51,4 +55,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(PostThread)
+export default connect(mapStateToProps, {getPostThread})(PostThread)
