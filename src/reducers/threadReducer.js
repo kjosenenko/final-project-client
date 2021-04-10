@@ -11,6 +11,11 @@ const threadReducer = (state=initialState, action) => {
                 post: action.thread,
                 replies: action.thread.replies
             }
+        case "ADD_REPLY":
+            return {
+                ...state,
+                replies: [...state.replies, action.reply]
+            }
         default:
             return state
     }

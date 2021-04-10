@@ -9,7 +9,7 @@ class Post extends Component {
                 <h5 className="card-title green">{subject}</h5>
                 <small className="card-text grey">by: {author}</small>
                 <p className="card-text white">{post}</p>
-                <Link className="btn btn-secondary" to={`/posts/${id}`}>{id}</Link>
+                <Link className="btn btn-secondary" to={`/posts/${id}`}>View this thread</Link>
             </div>
         )
     }

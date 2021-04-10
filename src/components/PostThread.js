@@ -1,17 +1,34 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import Reply from './Reply'
-import {getPostThread} from '../actions/postThread'
+import {getPostThread, addReply} from '../actions/postThread'
 
 class PostThread extends Component {
+    state = {
+        author: "",
+        reply: "",
+        post_id: this.props.paramsId
+    }
+
     componentDidMount() {
         this.props.getPostThread(this.props.paramsId)
     }
+
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    handleSubmit = e => {
+        this.props.addReply(this.state)
+    }
+
     render() {
         const post = this.props.post
         let replies = this.props.replies
         if(replies) {
-            replies = this.props.replies.map((reply, i) => <Reply key={i} author={reply.author} reply={reply.reply}/>)
+            replies = this.props.replies.map((reply) => <Reply key={reply.id} author={reply.author} reply={reply.reply}/>)
             return (
                 <div>
                     <h3 className="card-title white">{post.subject}</h3>
@@ -20,17 +37,17 @@ class PostThread extends Component {
                     <div className="subContainer">
                         {replies}
                         <h5>Post a reply</h5>
-                        <form>
+                        <form onSubmit={this.handleSubmit}>
                             <div className="mb-3 row">
                                 <div className="col">
                                     <label>Author</label><br/>
-                                    <input/>
+                                    <input type="text" id="author" name="author" value={this.state.author} onChange={this.handleChange}/>
                                 </div>
                                 <div className="col"></div>
                             </div>
                             <div className="mb-3">
-                                <label>Post</label><br/>
-                                <textarea></textarea>
+                                <label>Reply</label><br/>
+                                <textarea id="reply" name="reply" value={this.state.reply} onChange={this.handleChange}></textarea>
                             </div>
                             <button className="btn btn-dark">Post Reply</button>
                         </form>
@@ -55,4 +72,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {getPostThread})(PostThread)
+export default connect(mapStateToProps, {getPostThread, addReply})(PostThread)

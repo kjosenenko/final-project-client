@@ -4,7 +4,7 @@ import Post from './Post'
 
 class Posts extends Component {
     render() {
-        const posts = this.props.posts.map((post, i) => <Post key={i} author={post.author} subject={post.subject} post={post.post} id={post.id}/>)
+        const posts = this.props.posts.map((post) => <Post key={post.id} author={post.author} subject={post.subject} post={post.post} id={post.id}/>)
         return (
             <div>
                 <h1 className="white">Posts</h1>
