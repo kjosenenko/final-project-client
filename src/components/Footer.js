@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class Footer extends Component {
     render() {
         return (
-            <div>
+            <div className="white">
                 Its not Reddit its Greennit! &copy; 1987
             </div>
         )

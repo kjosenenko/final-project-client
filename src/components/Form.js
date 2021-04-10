@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Form extends Component {
     render() {
         return (
-            <form>
+            <form className="white">
                 <div className="mb-3 row">
                     <div className="col">
                         <label>Subject</label><br/>

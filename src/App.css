@@ -1,15 +1,11 @@
 #container-div {
-  background-image: linear-gradient(to bottom right, green, white);
+  background-image: linear-gradient(to bottom right, green, #191B1B);
   border-radius: 15px; 
   padding: 10px;
 }
 
-h1 {
-  color: white;
-}
-
-h5 {
-  color:green;
+body {
+  background-color: #191B1B;
 }
 
 textarea {
@@ -21,8 +17,24 @@ input {
   width: 100%;
 }
 
-small {
-  color:grey
+.white {
+  color: white;
+}
+
+.green {
+  color:green;
+}
+
+.grey {
+  color: grey;
+}
+
+.dark-background {
+  background-color:#191B1B;
+}
+
+.nav-background {
+  background-image: linear-gradient(to right, green , #191B1B);
 }
 
 .card {

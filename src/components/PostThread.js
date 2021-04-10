@@ -14,9 +14,9 @@ class PostThread extends Component {
             replies = this.props.replies.map((reply, i) => <Reply key={i} author={reply.author} reply={reply.reply}/>)
             return (
                 <div>
-                    <h3 className="card-title">{post.subject}</h3>
+                    <h3 className="card-title white">{post.subject}</h3>
                     <small className="card-text">by: {post.author}</small>
-                    <p className="card-text">{post.post}</p>
+                    <p className="card-text white">{post.post}</p>
                     <div className="subContainer">
                         {replies}
                         <h5>Post a reply</h5>

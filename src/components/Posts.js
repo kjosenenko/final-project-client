@@ -7,7 +7,7 @@ class Posts extends Component {
         const posts = this.props.posts.map((post, i) => <Post key={i} author={post.author} subject={post.subject} post={post.post} id={post.id}/>)
         return (
             <div>
-                <h1>Posts</h1>
+                <h1 className="white">Posts</h1>
                 {posts}
             </div>
         )

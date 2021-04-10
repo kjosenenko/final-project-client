@@ -6,7 +6,7 @@ export class Reply extends Component {
         return (
             <div>
                 <small>{author} says:</small>
-                <p>{reply}</p>
+                <p className="white">{reply}</p>
             </div>
         )
     }
