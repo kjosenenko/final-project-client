@@ -39,7 +39,7 @@ class PostThread extends Component {
             )
         } else {
             return (
-                <div className="spinner-border text-success" role="status">
+                <div className="spinner-border text-light" role="status">
                     <span className="visually-hidden">Loading...</span>
                 </div>
             )
